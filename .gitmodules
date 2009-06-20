@@ -1,0 +1,3 @@
+[submodule "assets/xinha"]
+	path = assets/xinha
+	url = git://github.com/railfrog/xinha.git
