@@ -2,16 +2,11 @@
 title: Railfrog
 ---
 
-## Railfrog as a Rails Engine
+## Railfrog
 
 Railfrog is a user-friendly, open-source website deployment and content management system built with Ruby on Rails, producing well structured and standards-compliant pages with Web 2.0 goodness.  Railfrog makes it easy for developers, designers, webmasters, or just about anyone else to deploy and manage a website.
 
-**These notes are _very_ out-of-date - please see work in progress at <http://github.com/railfrog/railfrog> for updates**
-
-====
-
-### Installation
-
+**These notes are out-of-date - please see work in progress at <http://github.com/railfrog/railfrog> for updates**
 
 
   ruby script/plugin install http://svn.rails-engines.org/engines/trunk/
@@ -98,4 +93,4 @@ and the original code is in Subversion on CVSDude svn:
 
 
 
-TBD
+
