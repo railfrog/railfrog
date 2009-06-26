@@ -1,80 +1,61 @@
-== Railfrog
+---
+title: Railfrog
+---
 
-Railfrog is a user-friendly, open-source website deployment and 
-content management system built with Ruby on Rails, producing 
-well structured and standards-compliant pages with Web 2.0 goodness. 
-Railfrog makes it easy for developers, designers, webmasters, or 
-just about anyone else to deploy and manage a website.
+## Railfrog as a Rails Engine
 
+Railfrog is a user-friendly, open-source website deployment and content management system built with Ruby on Rails, producing well structured and standards-compliant pages with Web 2.0 goodness.  Railfrog makes it easy for developers, designers, webmasters, or just about anyone else to deploy and manage a website.
 
-=== Prerequirements
+**These notes are _very_ out-of-date - please see work in progress at <http://github.com/railfrog/railfrog> for updates**
 
-# Install mime-types gem:
+====
 
-  gem install mime-types 
-
-
-=== Installation notes
-
-==== ... new application
-
-# Grab our empty Rails 2.0.2 application with installed Railfrog:
-
-  svn co https://svn.versiondude.net/railfrog/cms/reference_application/trunk railfrog
-
-# Edit config/database.yml if you need
-
-# Run
-  
-  rake db:migrate
+### Installation
 
 
-==== ... for existing applications
-
-# Install Rails Engines:
 
   ruby script/plugin install http://svn.rails-engines.org/engines/trunk/
 
-# Install acts_as_nested_set plugin:
+* Install acts_as_nested_set plugin:
 
   ruby script/plugin install http://svn.rubyonrails.org/rails/plugins/acts_as_nested_set/
 
-# Install upload_progress plugin:
+* Install upload_progress plugin:
 
   ruby script/plugin install http://svn.rubyonrails.org/rails/plugins/upload_progress/
 
-# Install Railfrog plugin:
+* Install Railfrog plugin:
 
   ruby script/plugin install http://svn.versiondude.net/railfrog/cms/railfrog/trunk
 
-# Add following line to config/environment.rb, just after the require of Rails' boot file:
+* Add following line to config/environment.rb, just after the require of Rails' boot file:
 
   require File.join(File.dirname(__FILE__), '../vendor/plugins/engines/boot')
 
-# Add following line to config/routes.rb, just after first line:
+* Add following line to config/routes.rb, just after first line:
 
   map.from_plugin :railfrog
 
-# Run:
+* Run:
 
   ruby script/generate plugin_migration && rake db:migrate
 
 
-=== Configuration
+### Configuration
 
-# To enable Xinha editor add following line to your config/environment.rb
+* To enable Xinha editor add following line to your config/environment.rb
   
   Railfrog.xinha_enabled = true
 
 
-=== How to use Railfrog
+### How to use Railfrog
 
 Start service by running script/server and open http://localhost:3000/admin
 
 TBD
 
 
-=== How to create new site
+### How to create new site
 
 You can find an example at vendor/plugins/railfrog/db/sites/railfrog 
 
@@ -83,7 +64,7 @@ To load example site from the file system run
   rake railfrog:site:load SITE=vendor/plugins/railfrog/db/sites/railfrog
 
 
-=== Localization of Railfrog Control Panel
+### Localization of Railfrog Control Panel
 
 By default you have English version of Railfrog Control Panel. If you'd like 
 to have localized version of UI you can easily localize Railfrog. Railfrog uses 
@@ -101,14 +82,20 @@ If you'd like to contribute localization file please send it to railfrog mailing
   railfrog-dev@googlegroups.com
 
 
-==== History
+### History
 
 Railfrog has been under development since June 2005, six months before
 Rails 1.0 was released. That means there's a lot of cruft, which we try
 to clear out and/or keep up to date -- but we need help with this :-)
 
-You'll find previous experimental work in svn -
+You'll find previous experimental work on GitHub:
+
+    <http://github.com/railfrog/railfrog-archive>
+
+and the original code is in Subversion on CVSDude svn:
+
     svn -r 434 co https://svn.versiondude.net/railfrog/cms/railfrog/branches
+
 
 
 TBD
