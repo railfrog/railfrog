@@ -6,8 +6,15 @@ title: Railfrog
 
 Railfrog is a user-friendly, open-source website deployment and content management system built with Ruby on Rails, producing well structured and standards-compliant pages with Web 2.0 goodness.  Railfrog makes it easy for developers, designers, webmasters, or just about anyone else to deploy and manage a website.
 
-**These notes are out-of-date - please see work in progress at <http://github.com/railfrog/railfrog> for updates**
+**NOTE: These notes are TOTALLY out-of-date - please see work in progress at <http://github.com/railfrog/railfrogcms> for updates.**
 
+If you're a Rails developer wanting to use Railfrog as an engine inside your project, there's probably enough information in these notes and `railfrogcms/README.md` to get started. If you do attempt this, please post to the mailing list with any problems. 
+
+Much of the material below is liable to change as we port Railfrog from Rails 2.0 to Rails 2.3.
+
+----
+
+**Older docs**
 
   ruby script/plugin install http://svn.rails-engines.org/engines/trunk/
 
@@ -42,6 +49,8 @@ Railfrog is a user-friendly, open-source website deployment and content manageme
   
   Railfrog.xinha_enabled = true
 
+_Update 2009-06-26: the xinha code now needs an `git submodule update --init` in the plugins/railfrog dir to pull in Xinha.
+
 
 ### How to use Railfrog
 
@@ -61,9 +70,9 @@ To load example site from the file system run
 
 ### Localization of Railfrog Control Panel
 
-By default you have English version of Railfrog Control Panel. If you'd like 
-to have localized version of UI you can easily localize Railfrog. Railfrog uses 
-Globalite plugin (http://code.google.com/p/globalite/). To localize Admin UI 
+By default you get the English version of the Railfrog Control Panel. If you'd like 
+to have a localized version of UI you can easily localize Railfrog. Railfrog uses 
+the Globalite plugin (http://code.google.com/p/globalite/). To localize Admin UI 
 you can just copy one of existing localization files eg:
 
   cp vendor/plugins/railfrog/lang/ui/ru.yml lang/ui
@@ -72,7 +81,7 @@ and add following line to your config/environment.rb file:
 
   Globalite.language = :ru
 
-If you'd like to contribute localization file please send it to railfrog mailing list:
+If you'd like to contribute a localization file please send it to railfrog mailing list:
 
   railfrog-dev@googlegroups.com
 
@@ -87,7 +96,7 @@ You'll find previous experimental work on GitHub:
 
     <http://github.com/railfrog/railfrog-archive>
 
-and the original code is in Subversion on CVSDude svn:
+and the original code is also still in Subversion on CVSDude svn:
 
     svn -r 434 co https://svn.versiondude.net/railfrog/cms/railfrog/branches
 
